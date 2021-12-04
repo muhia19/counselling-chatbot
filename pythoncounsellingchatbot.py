@@ -1,5 +1,5 @@
 
-# Author: Ashley Kelso
+# Author: Janet Muhia and Lavina Odungo
 # this is a victims compensation chat bot designed to lead users through a series of questions to determine what
 # assistance they may be entitled to and to refer them to helpful services
 
@@ -15,13 +15,16 @@ bayes = pickle.load(open("MultiNB.p","rb"))
 def response(key):
     #dictionary of all the questions and responses for the chatbot
     conversations = {'welcome' :"Hi, I'm a chatbot. \nMy job is to help people with information about "
-                                "victims support services in New South Wales. If you have been the "
-                                "victim of physical or sexual abuse I'd like to help you \n\n",
+                                "victims support services and also offer counselling services to both 
+                                "drug addics and the victims of assault. If you have been the "
+                                "victim of physical or sexual abuse or drug addiction, I'd like to help you \n\n",
 
                      'main menu': "Would you like some information on: \n"
                                   "1. Free legal services \n"
                                   "2. Counselling \n"
-                                  "3. Victims Compensation \n\n"
+                                  "3. Victims Compensation \n"
+                                  "4. Drug addiction \n\n"
+                                  
                                   "When you're done talking to me, just say 'bye'\n\n",
 
                      'limit': "That's everything I know about. \n\n",
@@ -151,11 +154,11 @@ def response(key):
                                             "directory.php \n\n",
 
                      'sexual abuse information': "Here's a link to some information on your legal rights: \n"
-                                                 "http://www.wlsnsw.org.au/resources/sexual-assault/ \n\n" ,
+                                                 "https://www.ilo.org/wcmsp5/groups/public/---ed_protect/---protrav/---ilo_aids/documents/legaldocument/wcms_127528.pdf/ \n\n" ,
 
-                     'AVO': "Here's some information from the Southern Women's Group about how to make an Apprehended "
-                            "Violence Order work for you: http://www.sl.nsw.gov.au/sites/default/files/just_piece_paper"
-                            ".pdf \n\n",
+                     'AVO': "Here's some information from the handbook on protection orders in Kenya. Some society organisationsare working to end sexual and gender based violence "
+                            "and remember you don't need a lawyer; Here is a link for the protection orders.https://covaw.or.ke/wp-content/uploads/2021/02/Hand-Book-on-Protection-orders-in-Kenya.pdf. n\n"
+                            "And this other link contains information about drug addiction that may be helpful: https://nacada.go.ke/sites/default/files/2021-07/National%20Guidelines%20on%20Drug%20Use%20Prevention%202021.pdf. n\n"
 
                      'attempt': "Sorry about that, could we try that again? I'm doing my best, but I'm still learning."
                                 " would you mind rephrasing your response for me (yes/no)? \n\n"
