@@ -170,6 +170,7 @@ def stateManager(user_response, state):
     #for classifying simple user responses
     yes = ['yep', 'yeah', 'yes', 'yup', 'correct', "ok"]
     no = ['no', 'nah', 'nope', "didn't", "wasn't", 'not']
+    drugaddiction= ["drugs", "addiction","drug abuse","substance abuse","junkie"]
     legal = ["lawyer", "solicitor", "legal"]
     victimsComp = ["victims", "compensation", "victim's", "comp", "money", "financial", "victim"]
     counselling = ["counselling", "counseling", "psychologist", "therapy", "counsellor", "therapist"]
@@ -188,6 +189,11 @@ def stateManager(user_response, state):
                 break
             elif s in legal:
                 print(response('free legal services'))
+                print(response('main menu'))
+                state['previous_question'] = 'main menu'
+                break
+            elif s in legal:
+                print(response('drug addiction'))
                 print(response('main menu'))
                 state['previous_question'] = 'main menu'
                 break
